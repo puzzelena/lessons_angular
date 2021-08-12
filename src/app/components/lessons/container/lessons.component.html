@@ -1,0 +1,16 @@
+<div class="card">
+        <app-lessons-details
+          [lessons]="lessons"
+          (add)="onAdd($event)"
+          (select)="onSelect($event)">
+        </app-lessons-details>
+  <div class="display">
+  <p>You have {{lessons.length}} lessons</p>
+  <p>Total duration {{totalHours}} h</p>
+        <app-selected-lesson
+          [selectedLesson]="selectedLesson"
+          (edit)="onEdit($event)"
+          (delete)="onDelete($event)">
+      </app-selected-lesson>
+    </div>
+</div>

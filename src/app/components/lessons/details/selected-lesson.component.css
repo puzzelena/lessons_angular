@@ -1,0 +1,15 @@
+.btn {
+  color: #fff !important;
+	text-decoration: none;
+  font-weight: bold;
+	background: #30c1ed;
+	padding: 5px;
+	border-radius: 10px;
+	display: inline-block;
+	border: none;
+  margin: 5px;
+}
+
+.eLesson {
+  margin: 5% 20%;
+}

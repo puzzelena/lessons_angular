@@ -1,0 +1,42 @@
+<form #formLessons="ngForm" (ngSubmit)="onSubmit(formLessons)">
+  <div class="Lname">
+    <label for="name">Lesson name</label>
+    <input type="text"
+           id="name"
+           ngModel 
+           name="name"
+           required>
+    </div>
+    <div class="Lhour">
+    <label for="hour">Enter duration</label>
+    <input type="number"
+           id="hour"
+           ngModel
+           name="hour"
+           required>
+  </div>
+  <button 
+  [disabled]="!formLessons.valid" 
+  class="btn">
+  Add
+</button> 
+  <!--.valid occurs to ngForm it is contained in the ajax library-->
+</form>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">No</th>
+    <th scope="col">Lesson name</th>
+    <th scope="col">Duration </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let lesson of lessons; let i = index"
+      (click)="onSelect(lesson)">
+
+    <th scope="row">{{i+1}}</th>
+    <td>{{lesson.name}}</td>
+    <td>{{lesson.hour}}</td>
+  </tr>
+  </tbody>
+</table>
